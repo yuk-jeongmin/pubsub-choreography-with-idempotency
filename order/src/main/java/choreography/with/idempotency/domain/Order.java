@@ -49,8 +49,8 @@ public class Order  {
             order.setStatus("APPROVED");
             repository().save(order);
 
-            OrderApproved orderApproved = new OrderApproved(order);
-            orderApproved.publishAfterCommit();
+            OrderPlaced orderPlaced = new OrderPlaced(order);
+            orderPlaced.publishAfterCommit();
          });
     }
 

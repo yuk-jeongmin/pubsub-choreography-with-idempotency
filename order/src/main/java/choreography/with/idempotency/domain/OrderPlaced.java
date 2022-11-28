@@ -7,7 +7,7 @@ import lombok.*;
 
 @Data
 @ToString
-public class OrderApproved extends AbstractEvent {
+public class OrderPlaced extends AbstractEvent {
 
     private Long id;
     private String customerId;
@@ -17,10 +17,10 @@ public class OrderApproved extends AbstractEvent {
     private Integer qty;
     private String address;
 
-    public OrderApproved(Order aggregate){
+    public OrderPlaced(Order aggregate){
         super(aggregate);
     }
-    public OrderApproved(){
+    public OrderPlaced(){
         super();
     }
 }
