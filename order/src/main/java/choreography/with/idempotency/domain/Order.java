@@ -1,7 +1,7 @@
 package choreography.with.idempotency.domain;
 
 import choreography.with.idempotency.domain.OrderCreated;
-import choreography.with.idempotency.domain.OrderApproved;
+import choreography.with.idempotency.domain.OrderPlaced;
 import choreography.with.idempotency.domain.OrderRejected;
 import choreography.with.idempotency.OrderApplication;
 import javax.persistence.*;
