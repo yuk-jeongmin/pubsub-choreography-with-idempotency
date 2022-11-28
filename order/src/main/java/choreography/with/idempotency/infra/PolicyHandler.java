@@ -29,15 +29,9 @@ public class PolicyHandler{
         StockDecreased event = stockDecreased;
         System.out.println("\n\n##### listener Approve : " + stockDecreased + "\n\n");
 
-
-        
-
         // Sample Logic //
         Order.approve(event);
         
-
-        
-
     }
 
     @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='DeliveryFailed'")
@@ -46,15 +40,9 @@ public class PolicyHandler{
         DeliveryFailed event = deliveryFailed;
         System.out.println("\n\n##### listener Reject : " + deliveryFailed + "\n\n");
 
-
-        
-
         // Sample Logic //
         Order.reject(event);
         
-
-        
-
     }
     @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='StockDecreaseFailed'")
     public void wheneverStockDecreaseFailed_Reject(@Payload StockDecreaseFailed stockDecreaseFailed){
@@ -62,15 +50,9 @@ public class PolicyHandler{
         StockDecreaseFailed event = stockDecreaseFailed;
         System.out.println("\n\n##### listener Reject : " + stockDecreaseFailed + "\n\n");
 
-
-        
-
         // Sample Logic //
         Order.reject(event);
         
-
-        
-
     }
 
 }
